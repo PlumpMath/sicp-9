@@ -17,7 +17,7 @@ until' :: (t -> Bool) -> (t -> t) -> t -> t
 until' cond f x = if cond x then x else until' cond f (f x)
 
 deriv :: (Double -> Double) -> Double -> Double
-deriv f x = (f(x - eps) - f x) / eps
+deriv f x = (f(x + eps) - f x) / eps
 
 newton :: (Double -> Double) -> Double -> Double
 newton f = until' isGoodEnough improve
