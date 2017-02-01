@@ -9,9 +9,9 @@ fib a
   
 -- the iterative version
 fib' :: Integral a => a -> a
-fib' a = fibIter 1 0 a
+fib' = fibIterator 1 0
   
-fibIter :: Integral a => a -> a -> a -> a
-fibIter a b c
+fibIterator :: Integral a => a -> a -> a -> a
+fibIterator a b c
   | c == 0 = b
-  | otherwise = fibIter (a+b) a (c-1)
+  | otherwise = fibIterator (a+b) a (c-1)
