@@ -14,4 +14,4 @@ helper is
 
 reduce :: [Int] -> [Int]
 reduce (x:rest@(y:z)) = (x + y) : (reduce rest)
-reduce _ = []
+reduce _              = []
